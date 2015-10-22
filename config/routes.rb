@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
  
   resources :samplexes
+  resources :users
+  resources :posts
   get 'home/index'
 
  get 'home/index'
