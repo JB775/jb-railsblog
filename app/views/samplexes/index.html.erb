@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Samplexes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fname</th>
+      <th>Lname</th>
+      <th>Lname</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @samplexes.each do |samplex| %>
+      <tr>
+        <td><%= samplex.fname %></td>
+        <td><%= samplex.lname %></td>
+        <td><%= samplex.lname %></td>
+        <td><%= link_to 'Show', samplex %></td>
+        <td><%= link_to 'Edit', edit_samplex_path(samplex) %></td>
+        <td><%= link_to 'Destroy', samplex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Samplex', new_samplex_path %>
